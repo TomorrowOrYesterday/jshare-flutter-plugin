@@ -186,6 +186,7 @@ class JShareSocial extends JShareResponse {
 
   JShareSocial.fromJson(Map<dynamic, dynamic>jsonMap)
       : openid = jsonMap["openid"],
+        uid = jsonMap["uid"],
         token = jsonMap["token"],
         refreshToken = jsonMap["refreshToken"],
         expiration = jsonMap["expiration"],
@@ -195,6 +196,7 @@ class JShareSocial extends JShareResponse {
   Map toJsonMap() {
     Map map = super.toJsonMap();
     map.addAll({
+      "uid": uid ??=null,
       "openid": openid ??= null,
       "token" : token ??= null,
       "refreshToken" : refreshToken ??= null,
@@ -221,6 +223,7 @@ class JShareUserInfo extends JShareSocial {
   Map toJsonMap() {
     Map map = super.toJsonMap();
     map.addAll({
+      "uid": uid ??= null,
       "openid": openid ??= null,
       "token" : token ??= null,
       "refreshToken" : refreshToken ??= null,

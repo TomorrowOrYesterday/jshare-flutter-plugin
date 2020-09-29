@@ -268,6 +268,9 @@ static NSString *j_fail_code = @"fail";
     if (userInfo.gender) {
         dict[@"gender"] = [NSNumber numberWithInteger:userInfo.gender];
     }
+    if (userInfo.uid) {
+            dict[@"uid"] = userInfo.uid;
+        }
     if (userInfo.openid) {
         dict[@"openid"] = userInfo.openid;
     }
