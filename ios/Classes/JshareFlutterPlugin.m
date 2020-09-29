@@ -54,6 +54,10 @@ static NSString *j_fail_code = @"fail";
     if (appKey) {
         config.appKey = appKey;
     }
+    NSString *universalLink = call.arguments[@"universalLink"];
+    if (appKey) {
+        config.universalLink = universalLink;
+    }
     NSString *weChatAppId = call.arguments[@"weChatAppId"];
     if (weChatAppId) {
         config.WeChatAppId = weChatAppId;

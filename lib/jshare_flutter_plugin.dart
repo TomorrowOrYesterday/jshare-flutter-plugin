@@ -129,6 +129,7 @@ class JShareConfig {
   String facebookDisplayName;
   String twitterConsumerKey;
   String twitterConsumerSecret;
+  String universalLink;
 
   JShareConfig({@required String appKey}) {
     this.appKey = appKey;
@@ -152,6 +153,7 @@ class JShareConfig {
       "facebookDisplayName": facebookDisplayName ??= null,
       "twitterConsumerKey": twitterConsumerKey ??= null,
       "twitterConsumerSecret": twitterConsumerSecret ??= null,
+      "universalLink": universalLink ??=null,
     }..removeWhere((key, value) => value == null);
   }
 }
@@ -175,6 +177,7 @@ class JShareResponse {
 }
 
 class JShareSocial extends JShareResponse {
+  String uid;
   String openid;
   String token;
   String refreshToken;
